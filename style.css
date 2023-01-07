@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Aileron";
+  src: url("ikg/aileron.ultralight.otf") format("opentype");
+}
+
+.b-search {
+  cursor: pointer;
+}
+
+.pfp {
+  margin-left: 5em;
+}
+
+.username {
+  font-family: "Aileron";
+  letter-spacing: 1px;
+  font-size: larger;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: gray;
+}
+
+/* warna background navbar. warna putih bawaan bootstap kurang cerah */
+.putih {
+  background-color: white;
+}
+
+.foot {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* class gradien untuk pfp, nilai padding & warna background mangga atuh di modifikasi */
+.grad {
+  padding: 7px;
+  background: linear-gradient(45deg, #ffca00, #ff2847, #d408c6);
+}
+
+.curs {
+  cursor: pointer;
+}
+
+.curs_n {
+  cursor: default;
+}
+
+/* class container untuk masing-masing gambar */
+.container-gambar {
+  position: relative;
+}
+
+/* class untuk gambar album */
+.gambar {
+  opacity: 1;
+  display: block;
+  backface-visibility: hidden;
+}
+
+/* class untuk overlay like/komen */
+.like-komen {
+  transition: 0.2s ease;
+  /* opacity 0 supaya ketika kursor belum diarahkan ke gambar, overlay tidak akan muncul */
+  opacity: 0;
+  /* untuk menengahkan ikon */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* barulah ketika kursor diarahkan, opacity jadi 1 untuk memunculkan overlay */
+.container-gambar:hover .like-komen {
+  opacity: 1;
+}
+
+/* gambar jadi 50% gelap ketika kursor diarahkan. monggo disesuaikan nilai brightnessnya sesukamu*/
+.container-gambar:hover .gambar {
+  filter: brightness(0.5);
+}
+
+/* khusus untuk halaman index.html */
+.ikon-index {
+  transition: 0.25s;
+}
+
+.ikon-index:hover {
+  filter: invert(1);
+}
+
+.logo-index {
+  transition: 0.25s;
+}
+
+.logo-index:hover {
+  transform: scale(1.05);
+}
